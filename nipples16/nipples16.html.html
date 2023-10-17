@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>Some Memorable Movies </h1>
+<h3><span class="ital">Male Nipples </span>(Steven Higgins-Foster, 2022)</h3>
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_DTRT_img01()" src="image/Nip1.png" alt="Male Nipples">
+<img class="filmStill" onClick="onClick_DTRT_img02()" src="image/Nip2.png" alt="Male Nipples">
+<img class="filmStill" onClick="onClick_DTRT_img03()" src="image/Nip3.png" alt="Male Nipples">
+</div>
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ipsa odio magni exercitationem aliquam nisi dicta natus nemo, modi veniam ratione suscipit voluptatem eligendi quo! Consequuntur reiciendis dignissimos, neque consectetur odit amet saepe, unde perspiciatis, quae qui aspernatur necessitatibus id molestiae placeat pariatur delectus. Placeat at atque porro natus sed.</p>
+
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+
+</body>
+<script>
+	
+	var gotoMovie_btn =document.getElementById("gotoMovie_btn");
+	gotoMovie_btn.style.visibility = "hidden";
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false
+	
+	
+var DTRT_text=document.getElementById("DTRT_text");
+var DTRT00 = "In one of my film classes, I was tasked to make a subject film on any topic of my choosing. For this project, I decided to make a movie about my curiosity and many others about men's nipples and their use on the male body. Most of the scenes I used were archival footage from vintage porn. "
+DTRT_text.innerHTML=DTRT00;
+
+var DTRT01="This is, by far, one of my most creative films to date. This scene serves as the title of my film. Most of the responses I got from my professor, and my classmates were hilarious and insightful. This still comes from the title scene of my file. I was surprised that I did not get a virus on my computer from all the vintage porn I downloaded. "
+function onClick_DTRT_img01(){
+DTRT_text.innerHTML=DTRT01;
+img01_clicked = true;
+console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}	
+
+var DTRT02="This scene was also apart of the title screen. The fuzzy contrast of males nipples you see were all video clips I compiled from vintage porn. When editing for my film, I got very weird stares in the computer lab by fellow filmmakers. Luckily, I was able to make conversation with my edits and made some friends as well. "
+	function onClick_DTRT_img02(){
+	DTRT_text.innerHTML=DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+	}
+var DTRT03="My film also consisted of interviews I forced my classmates to partake in. The question I proposed was their honest feelings on male nipples and their use on the male body. The faces I got from such a question was priceless. Most of the responses I got were that male nipples are useless and not an attractive feature on the male body. As a man with nipples, I found their responses extremely hurtful."	
+function onClick_DTRT_img03(){
+DTRT_text.innerHTML= DTRT03;
+img03_clicked = true;
+console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+	
+// Palm Trees in the Snow section*************************************************************
+	
+
+// Silent Hill section *************************************************************
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+	function gotoMovie(){
+		window.open("https://vimeo.com/875242029?share=copy", "_blank");
+	}
+	
+</script>
+</html>
